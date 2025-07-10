@@ -5,7 +5,7 @@ require_once('../plantillas/cabecera.php');
 <article>
     <h2>Dar de alta un vehiculo</h2>
 
-    <form action="insertar.php" method="post">
+    <form action="insertar.php" method="POST">
         <div  class="control mb-3">
             <label for="matricula" class="col-sm-2 col-form-label">Matricula:</label>
             <input type="text" name="matricula" id="matricula" required class="form-control">
@@ -37,8 +37,8 @@ require_once('../plantillas/cabecera.php');
         </div>
 
          <div  class="control mb-3">
-            <label for="fecha_matriculacion" class="col-sm-2 col-form-label">Fecha matriculación:</label>
-            <input type="date" name="fecha_matriculacion" id="fecha_matriculacion" required class="form-control">
+            <label for="fecha" class="col-sm-2 col-form-label">Matriculación:</label>
+            <input type="date" name="fecha" id="fecha" required class="form-control">
         </div>
 
          <div  class="control mb-3">
@@ -46,14 +46,13 @@ require_once('../plantillas/cabecera.php');
             <input type="text" name="cilindrada" id="cilindrada" required class="form-control">
         </div>
 
-
         <div  class="control mb-3">
-            <label for="itv_pasada" class="col-sm-2 col-form-label">Itv pasada:</label><br>  
-            <input type="radio" id="si" name="itv_pasada"  checked>
-            <label for="itv_si">Sí</label>
-            <input type="radio" id="no" name="itv_pasada" >
-            <label for="itv_no">No</label><br>
+        <label for="itv_si">Sí</label>
+        <input type="radio" id="itv_si" name="itv_pasada" checked value="Si">
+        <label for="itv_no">No</label>
+        <input type="radio" id="itv_no" name="itv_pasada" value="No">
         </div>
+      
 
         <div  class="control mb-3">
             <input type="submit" value="Añadir vehiculo"   class="btn btn-primary">

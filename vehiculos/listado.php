@@ -20,10 +20,10 @@
        
        <?php
             if (isset($_POST['filtrar'])) {
-                $fecha = $_POST['fecha'];
-                $consulta="SELECT * FROM vehiculos WHERE fecha_matriculacion > '$fecha'";
+                $fecha = $_POST['fecha']; //Recogemos en la variable con variable $POST el name del formulario fecha
+                $consulta = "SELECT * FROM vehiculos WHERE fecha_matriculacion >'$fecha'";
             } else {
-                $consulta ="SELECT * FROM vehiculos";
+                $consulta = "SELECT * FROM vehiculos";
             }
 
 

@@ -11,7 +11,7 @@ require_once('../plantillas/cabecera.php');
     $modelo = $_POST['modelo'];
     $tipo = $_POST['tipo'];
     $color = $_POST['color'];
-    $fecha_matriculacion = $_POST['fecha_matriculacion'];
+    $fecha = $_POST['fecha'];
     $cilindrada = $_POST['cilindrada'];
     $itv_pasada = $_POST['itv_pasada'];
 
@@ -25,14 +25,14 @@ require_once('../plantillas/cabecera.php');
         <li>Modelo: <?=$modelo?></li>
         <li>Tipo: <?=$tipo?></li>
         <li>Color: <?=$color?></li>
-        <li>Fecha matriculación: <?=$fecha_matriculacion?></li>
+        <li>Fecha matriculación: <?=$fecha?></li>
         <li>Cilindrada: <?=$cilindrada?></li>
         <li>Itv pasada: <?=$itv_pasada?></li>
     </ul>
 
     <?php 
         $consulta = 
-            "insert into vehiculos(matricula, marca, modelo, tipo, color, fecha_matriculacion, cilindrada, itv_pasada) values('$matricula','$marca', '$modelo', '$tipo', '$color', '$fecha_matriculacion', $cilindrada, '$itv_pasada') ";
+            "insert into vehiculos(matricula, marca, modelo, tipo, color, fecha_matriculacion, cilindrada, itv_pasada) values('$matricula','$marca', '$modelo', '$tipo', '$color', '$fecha', $cilindrada, '$itv_pasada') ";
 
            // ejecutamos la consulta
            $resultado = mysqli_query($conexion, $consulta);
